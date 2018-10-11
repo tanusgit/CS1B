@@ -51,9 +51,11 @@ public class CaesarCipher {
 			//additional code to fix the problem
 			else
 			{
-				int mul = (mya - (firstletter + shift))/26 + 1;
-				aftershift = firstletter + shift + 26*mul;
-				finalresult = (aftershift % mya) % 26 + mya;
+				//int mul = (mya - (firstletter + shift))/26 + 1;
+				//aftershift = firstletter + shift + 26*mul;
+				int n = ((shift %26)+26) + firstletter;
+				finalresult = (n % mya) % 26 + mya;
+				//finalresult = (aftershift % mya) % 26 + mya;
 			}
 
 			char charfinal = (char)finalresult;
